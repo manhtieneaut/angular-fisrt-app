@@ -1,22 +1,20 @@
-<main class="main">
-  <mat-sidenav-container class="main-container">
-  <mat-sidenav mode="side" opened class="sidenav">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-      <a mat-list-item routerLink="/users" routerLinkActive="active">Users</a>
-      <a mat-list-item routerLink="/settings" routerLinkActive="active">Settings</a>
-    </mat-nav-list>
-  </mat-sidenav>
+<div class="container">
+  <nav class="sidebar">
+    <h3>Menu</h3>
+    <ul>
+      <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+      <li><a routerLink="/user" routerLinkActive="active">Users</a></li>
+      <li><a routerLink="/product" routerLinkActive="active">Products</a></li>
+    </ul>
+  </nav>
 
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <span>My App</span>
-    </mat-toolbar>
-    <div class="content">
+  <div class="main-content">
+    <header class="toolbar">
+      <h1>My App</h1>
+    </header>
+
+    <section class="content">
       <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
-
-</main>
+    </section>
+  </div>
+</div>
