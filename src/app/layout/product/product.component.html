@@ -1,1 +1,12 @@
-<p>product works!</p>
+<div class="product-list">
+  <ul>
+    <li *ngFor="let product of products">
+      <img [src]="product.image" alt="{{ product.title }}" width="80" />
+      <div>
+        <strong>{{ product.title }}</strong> – {{ product.price | currency }}
+        <p>{{ product.description }}</p>
+        <small>Brand: {{ product.brand }} | Stock: {{ product.stock }}</small>
+      </div>
+    </li>
+  </ul>
+</div>
