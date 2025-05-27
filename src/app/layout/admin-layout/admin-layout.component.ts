@@ -8,7 +8,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 
 import { BreadcrumbComponent } from '../../shared/breadcrumb/breadcrumb.component';
-import { LoadingComponent } from '../../shared/loading/loading.component';
 
 @Component({
   selector: 'app-admin-layout',
@@ -23,15 +22,10 @@ import { LoadingComponent } from '../../shared/loading/loading.component';
     MatListModule,
     MatButtonModule,
     BreadcrumbComponent,
-    LoadingComponent,
   ],
   templateUrl: './admin-layout.component.html',
   styleUrls: ['./admin-layout.component.css']
 })
 export class AdminLayoutComponent {
-  loading = true;
-
-  constructor() {
-    setTimeout(() => this.loading = false, 2000); // Giả lập loading
-  }
+  
 }
