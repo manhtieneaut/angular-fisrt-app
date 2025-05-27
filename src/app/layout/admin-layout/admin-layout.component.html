@@ -1,0 +1,34 @@
+<mat-sidenav-container class="layout-container">
+  <mat-sidenav mode="side" opened class="sidenav">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/admin/dashboard">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </a>
+      <a mat-list-item routerLink="/admin/product">
+        <mat-icon>inventory_2</mat-icon>
+        <span>Product</span>
+      </a>
+      <a mat-list-item routerLink="/admin/setting">
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </a>
+      <a mat-list-item routerLink="/admin/report">
+        <mat-icon>bar_chart</mat-icon>
+        <span>Reports</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <app-breadcrumb></app-breadcrumb>
+    </mat-toolbar>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+      <app-loading [isLoading]="loading"></app-loading>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
