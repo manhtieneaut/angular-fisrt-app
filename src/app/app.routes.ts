@@ -12,13 +12,13 @@ export const routes: Routes = [
         path: '',
         pathMatch: 'full',
         loadComponent: () =>
-          import('./layout/custom-layout/pages/home/home.component').then(m => m.HomeComponent),
+          import('./pages/home/home.component').then(m => m.HomeComponent),
         data: { breadcrumb: 'Home' }
       },
       {
         path: 'about',
         loadComponent: () =>
-          import('./layout/custom-layout/pages/about/about.component').then(m => m.AboutComponent),
+          import('./pages/about/about.component').then(m => m.AboutComponent),
         data: { breadcrumb: 'About' }
       }
     ]
@@ -32,25 +32,25 @@ export const routes: Routes = [
       {
         path: 'dashboard',
         loadComponent: () =>
-          import('./layout/admin-layout/pages/dashboard/dashboard.component').then(m => m.DashboardComponent),
+          import('./pages/dashboard/dashboard.component').then(m => m.DashboardComponent),
         data: { breadcrumb: 'Dashboard' }
       },
       {
         path: 'product',
         loadComponent: () =>
-          import('./layout/admin-layout/pages/product/product.component').then(m => m.ProductComponent),
+          import('./pages/product/product.component').then(m => m.ProductComponent),
         data: { breadcrumb: 'Product' }
       },
       {
         path: 'setting',
         loadComponent: () =>
-          import('./layout/admin-layout/pages/setting/setting.component').then(m => m.SettingComponent),
+          import('./pages/setting/setting.component').then(m => m.SettingComponent),
         data: { breadcrumb: 'Setting' }
       },
       {
         path: 'report',
         loadComponent: () =>
-          import('./layout/admin-layout/pages/report/report.component').then(m => m.ReportComponent),
+          import('./pages/report/report.component').then(m => m.ReportComponent),
         data: { breadcrumb: 'Report' }
       },
       {

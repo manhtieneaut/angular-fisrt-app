@@ -7,7 +7,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 
-import { BreadcrumbComponent } from '../../shared/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../shared/breadcrumb.component';
 
 @Component({
   selector: 'app-admin-layout',
