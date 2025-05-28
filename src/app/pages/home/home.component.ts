@@ -1,24 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { UserStore } from '../../store/user.store';
-import { CommonModule } from '@angular/common';
-import { toSignal } from '@angular/core/rxjs-interop';
+import { NgFor } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule],
+  imports: [
+    NgFor
+
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit {
-   users!: typeof this.userStore.users;
-  loading!: typeof this.userStore.loading;
+export class HomeComponent {
+  name: string = 'Tiến';
+  age: number = 22;
+  skills: string[] = ['Angular', 'TypeScript', 'HTML', 'CSS'];
 
-  constructor(private userStore: UserStore) {
-    this.users = this.userStore.users;
-    this.loading = this.userStore.loading;
-  }
-
-  ngOnInit() {
-    this.userStore.fetchUsers();
+  getGreeting(): string {
+    return `Xin chào ${this.name}, bạn ${this.age} tuổi`;
   }
 }

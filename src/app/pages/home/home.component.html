@@ -1,19 +1,11 @@
-<h2>User List</h2>
+<h2>Thông tin cá nhân</h2>
 
-<ng-container *ngIf="!loading(); else loadingTpl">
-  <ul *ngIf="users().length > 0; else emptyTpl">
-    <li *ngFor="let user of users()">
-      <strong>{{ user.name.firstname }} {{ user.name.lastname }}</strong><br />
-      {{ user.email }} - {{ user.phone }}<br />
-      {{ user.address.street }}, {{ user.address.city }}, {{ user.address.country }}
-    </li>
-  </ul>
-</ng-container>
+<p>Tên: {{ name }}</p>
+<p>Tuổi: {{ age }}</p>
 
-<ng-template #loadingTpl>
-  <p>Loading users...</p>
-</ng-template>
+<p>Lời chào: {{ getGreeting() }}</p>
 
-<ng-template #emptyTpl>
-  <p>No users found.</p>
-</ng-template>
+<h3>Kỹ năng:</h3>
+<ul>
+  <li *ngFor="let skill of skills">{{ skill }}</li>
+</ul>

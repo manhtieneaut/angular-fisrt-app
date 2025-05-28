@@ -6,7 +6,6 @@ export const routes: Routes = [
   {
     path: '',
     component: CustomLayoutComponent,
-    data: { breadcrumb: 'Admin' },
     children: [
       {
         path: '',
@@ -20,6 +19,12 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./pages/about/about.component').then(m => m.AboutComponent),
         data: { breadcrumb: 'About' }
+      },
+      {
+        path: 'contact',
+        loadComponent: () =>
+          import('./pages/contact/contact.component').then(m => m.ContractComponent),
+        data: { breadcrumb: 'Contract' }
       }
     ]
   },
@@ -28,6 +33,7 @@ export const routes: Routes = [
   {
     path: 'admin',
     component: AdminLayoutComponent,
+    data: { breadcrumb: 'Admin' },
     children: [
       {
         path: 'dashboard',
@@ -60,8 +66,5 @@ export const routes: Routes = [
       }
     ]
   },
-  {
-    path: '**',
-    redirectTo: ''
-  }
+  
 ];

@@ -13,3 +13,28 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+
+.header {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a {
+  margin-left: 1rem;
+  color: #4b5563;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #2563eb;
+}
