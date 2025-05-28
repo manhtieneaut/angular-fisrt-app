@@ -1,0 +1,77 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "alice@example.com",
+      "username": "alice123",
+      "name": {
+        "firstname": "Alice",
+        "lastname": "Wonderland"
+      },
+      "address": {
+        "street": "123 Main St",
+        "city": "Wonder City",
+        "zipcode": "12345",
+        "country": "Wonderland"
+      },
+      "phone": "123-456-7890",
+      "orders": [
+        101,
+        102
+      ]
+    },
+    {
+      "id": 2,
+      "email": "bob@example.com",
+      "username": "bob321",
+      "name": {
+        "firstname": "Bob",
+        "lastname": "Builder"
+      },
+      "address": {
+        "street": "456 Construction Rd",
+        "city": "Buildtown",
+        "zipcode": "67890",
+        "country": "Buildland"
+      },
+      "phone": "987-654-3210",
+      "orders": [
+        103
+      ]
+    },
+    {
+      "id": "ffe0",
+      "email": "tienpetpet@gmail.com",
+      "username": "admin",
+      "name": {
+        "firstname": "Nguyễn",
+        "lastname": "Tiến"
+      },
+      "address": {
+        "street": "Hà Nội",
+        "city": "Hà Nội",
+        "zipcode": "000084",
+        "country": "Vietnam"
+      },
+      "phone": "0395002630",
+      "orders": []
+    },
+    {
+      "id": "7f44",
+      "email": "nmanhtien734@gmail.com",
+      "username": "user",
+      "name": {
+        "firstname": "Nguyễn",
+        "lastname": "Tiến"
+      },
+      "address": {
+        "street": "Hà Nội",
+        "city": "Hà Nội",
+        "zipcode": "000084",
+        "country": "Vietnam"
+      },
+      "phone": "0395002630",
+      "orders": []
+    }
+  ]
+}
