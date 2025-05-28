@@ -53,6 +53,12 @@ export const routes: Routes = [
           import('./pages/setting/setting.component').then(m => m.SettingComponent),
         data: { breadcrumb: 'Setting' }
       },
+       {
+        path: 'users',
+        loadComponent: () =>
+          import('./pages/user/user.component').then(m => m.UserComponent),
+        data: { breadcrumb: 'Users' }
+      },
       {
         path: 'report',
         loadComponent: () =>

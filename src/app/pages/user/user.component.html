@@ -1,0 +1,10 @@
+
+<ng-container *ngIf="userState.isLoading(); else showUsers">
+  <p>Loading...</p>
+</ng-container>
+
+<ng-template #showUsers>
+  <div *ngFor="let user of userState.users$()">
+    {{ user.name.firstname }} {{ user.name.lastname }}
+  </div>
+</ng-template>
