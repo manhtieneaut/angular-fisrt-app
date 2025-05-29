@@ -4,7 +4,7 @@ import { BehaviorSubject, tap } from 'rxjs';
 
 interface LoginResponse {
   token: string;
-  user: any; // tùy cấu trúc user của bạn
+  user: any;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -19,8 +19,8 @@ export class AuthService {
   constructor() {
     const token = localStorage.getItem(this._tokenKey);
     if (token) {
-      // TODO: validate token hoặc decode để set user
-      this._user.next({}); // giả sử decode user
+      // TODO: decode token to get user info
+      this._user.next({});
     }
   }
 

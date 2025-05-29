@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 import { CustomLayoutComponent } from './layout/custom-layout/custom-layout.component';
+import { LoginComponent } from './auth/components/login/login.component';
+import { AuthGuard } from './auth/guards/auth.guard';
 
 export const routes: Routes = [
   {
@@ -28,13 +30,19 @@ export const routes: Routes = [
       }
     ]
   },
-
+  {
+    path: 'login',
+    loadComponent: () =>
+      import('./auth/components/login/login.component').then(m => m.LoginComponent),
+  },
 
   {
     path: 'admin',
     component: AdminLayoutComponent,
     data: { breadcrumb: 'Admin' },
+    canActivate: [AuthGuard],
     children: [
+
       {
         path: 'dashboard',
         loadComponent: () =>
@@ -53,7 +61,7 @@ export const routes: Routes = [
           import('./pages/setting/setting.component').then(m => m.SettingComponent),
         data: { breadcrumb: 'Setting' }
       },
-       {
+      {
         path: 'users',
         loadComponent: () =>
           import('./pages/user/user.component').then(m => m.UserComponent),
@@ -72,5 +80,5 @@ export const routes: Routes = [
       }
     ]
   },
-  
+
 ];

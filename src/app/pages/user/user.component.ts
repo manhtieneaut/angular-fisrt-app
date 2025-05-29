@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { NgIf} from '@angular/common';
+import { NgIf } from '@angular/common';
 import { UserStateService } from '../../services/user.service';
 
 // Angular Material Modules
@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { LoggerService } from '../../core/logger.service';
 
 @Component({
   selector: 'app-user',
@@ -22,11 +23,13 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+
   ]
 })
 export class UserComponent {
   userState = inject(UserStateService);
+  logger = inject(LoggerService);
 
   addUser(event: Event) {
     event.preventDefault();
@@ -51,6 +54,7 @@ export class UserComponent {
     };
 
     this.userState.addUser(newUser).subscribe(() => {
+      this.logger.info('Thêm user thành công');
       form.reset();
     });
   }
