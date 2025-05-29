@@ -133,6 +133,11 @@
       },
       "phone": "0395002630",
       "orders": []
+    },
+    {
+      "id": "c2ed",
+      "email": "manhtien1262@gmail.com",
+      "password": "user123"
     }
   ]
 }

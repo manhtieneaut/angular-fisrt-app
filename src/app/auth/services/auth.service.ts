@@ -25,27 +25,27 @@ export class AuthService {
       }
     }
   }
-
   login(email: string, password: string) {
-    return this.http.get<any[]>(`http://localhost:3000/users?email=${email}&password=${password}`).pipe(
+    return this.http.get<any[]>(`http://localhost:3000/users`).pipe(
       map(users => {
-        if (users.length === 0) {
+        const found = users.find(user => user.email === email && user.password === password);
+        if (!found) {
           throw new Error('Email hoặc mật khẩu không đúng');
         }
         return {
           token: 'fake-jwt-token',
-          user: users[0]
+          user: found
         };
       }),
       tap(res => {
-        if (this.isBrowser) {
-          localStorage.setItem(this._tokenKey, res.token);
-          localStorage.setItem('auth_user', JSON.stringify(res.user));
-        }
+        localStorage.setItem(this._tokenKey, res.token);
+        localStorage.setItem('auth_user', JSON.stringify(res.user));
         this._user.next(res.user);
       })
     );
   }
+
+
 
   logout() {
     if (this.isBrowser) {
