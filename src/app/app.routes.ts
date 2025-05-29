@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 import { CustomLayoutComponent } from './layout/custom-layout/custom-layout.component';
 import { LoginComponent } from './auth/components/login/login.component';
-import { AuthGuard } from './auth/guards/auth.guard';
+import { authGuard } from './auth/guards/auth.guard'; // ✅ Đúng
 
 export const routes: Routes = [
   {
@@ -40,7 +40,7 @@ export const routes: Routes = [
     path: 'admin',
     component: AdminLayoutComponent,
     data: { breadcrumb: 'Admin' },
-    canActivate: [AuthGuard],
+    canActivate: [authGuard],
     children: [
 
       {

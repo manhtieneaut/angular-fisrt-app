@@ -1,9 +1,11 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "email": "alice@example.com",
+      "password": "alice123",
       "username": "alice123",
+      "role": "user",
       "name": {
         "firstname": "Alice",
         "lastname": "Wonderland"
@@ -21,9 +23,11 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "email": "bob@example.com",
+      "password": "bob321",
       "username": "bob321",
+      "role": "user",
       "name": {
         "firstname": "Bob",
         "lastname": "Builder"
@@ -40,9 +44,11 @@
       ]
     },
     {
-      "id": "ffe0",
-      "email": "tienpetpet@gmail.com",
-      "username": "admin",
+      "id": "d907",
+      "email": "manhtien1262@gmail.com",
+      "password": "user123",
+      "username": "Tien2002",
+      "role": "user",
       "name": {
         "firstname": "Nguyễn",
         "lastname": "Tiến"
@@ -57,9 +63,64 @@
       "orders": []
     },
     {
-      "id": "7f44",
-      "email": "nmanhtien734@gmail.com",
-      "username": "user",
+      "id": "4245",
+      "email": "11",
+      "password": "test123",
+      "username": "Tien2002",
+      "role": "user",
+      "name": {
+        "firstname": "Nguyễn",
+        "lastname": "Tiến"
+      },
+      "address": {
+        "street": "Hà Nội",
+        "city": "Hà Nội",
+        "zipcode": "000084",
+        "country": "Vietnam"
+      },
+      "phone": "0395002630",
+      "orders": []
+    },
+    {
+      "id": "bf72",
+      "email": "manhtien1262@gmail.com",
+      "password": "admin123",
+      "username": "admin",
+      "role": "admin",
+      "name": {
+        "firstname": "Nguyễn",
+        "lastname": "Tiến"
+      },
+      "address": {
+        "street": "Hà Nội",
+        "city": "Hà Nội",
+        "zipcode": "000084",
+        "country": "Vietnam"
+      },
+      "phone": "0395002630",
+      "orders": []
+    },
+    {
+      "id": "bfd5",
+      "email": "manhtien1262@gmail.com",
+      "username": "tiennm1",
+      "name": {
+        "firstname": "Nguyễn",
+        "lastname": "Tiến"
+      },
+      "address": {
+        "street": "Hà Nội",
+        "city": "Hà Nội",
+        "zipcode": "000084",
+        "country": "Vietnam"
+      },
+      "phone": "0395002630",
+      "orders": []
+    },
+    {
+      "id": "c4dd",
+      "email": "manhtien1262@gmail.com",
+      "username": "admin",
       "name": {
         "firstname": "Nguyễn",
         "lastname": "Tiến"

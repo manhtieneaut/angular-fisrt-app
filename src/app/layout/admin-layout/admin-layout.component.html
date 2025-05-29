@@ -15,7 +15,7 @@
         <span>Settings</span>
       </a>
       <a mat-list-item routerLink="/admin/users">
-        <mat-icon>Users</mat-icon>
+        <mat-icon>people</mat-icon>  <!-- icon nên dùng đúng tên, "Users" không phải icon -->
         <span>Users</span>
       </a>
       <a mat-list-item routerLink="/admin/report">
@@ -26,10 +26,9 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar>
+    <app-header>
       <app-breadcrumb></app-breadcrumb>
-    </mat-toolbar>
-
+    </app-header>
     <div class="content">
       <router-outlet></router-outlet>
     </div>

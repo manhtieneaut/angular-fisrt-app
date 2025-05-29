@@ -1,5 +1,8 @@
-<form (submit)="login($event)">
-  <input name="email" type="email" required placeholder="Email" />
-  <input name="password" type="password" required placeholder="Password" />
-  <button type="submit">Login</button>
-</form>
+<div class="login-container">
+  <form class="login-form" (submit)="login($event)">
+    <h2>Login</h2>
+    <input name="email" type="email" required placeholder="Email" />
+    <input name="password" type="password" required placeholder="Password" />
+    <button type="submit">Login</button>
+  </form>
+</div>

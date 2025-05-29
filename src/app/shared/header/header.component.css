@@ -1,0 +1,37 @@
+.layout-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  background: #1976d2; /* Màu primary của Angular Material */
+  color: white;
+  height: 64px; /* Chiều cao tiêu chuẩn toolbar */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-weight: 600;
+  user-select: none;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.username {
+  margin-right: 16px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.content {
+  padding: 24px;
+  flex-grow: 1; /* để content chiếm phần còn lại */
+  background: #f5f5f5; /* màu nền nhẹ cho content */
+  overflow-y: auto;
+}
